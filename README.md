@@ -1,1 +1,2 @@
-ALU shell project
+Shell permissions project
+ALU shell projects
