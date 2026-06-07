@@ -1,22 +1,2 @@
 #!/bin/bash
-export BESTCHOL=(b e s t c h o l h c u l z)
-export WATER_DEC=$((5#$(echo "$WATER" | tr 'water' '0-4')))
-export STIR_DEC=$((5#$(echo "$STIR" | tr 'stir.' '0-4')))
-export TOTAL=$((WATER_DEC + STIR_DEC))
-export RES1=${BESTCHOL[$((TOTAL % 13))]}
-export TOTAL=$((TOTAL / 13))
-export RES2=${BESTCHOL[$((TOTAL % 13))]}
-export TOTAL=$((TOTAL / 13))
-export RES3=${BESTCHOL[$((TOTAL % 13))]}
-export TOTAL=$((TOTAL / 13))
-export RES4=${BESTCHOL[$((TOTAL % 13))]}
-export TOTAL=$((TOTAL / 13))
-export RES5=${BESTCHOL[$((TOTAL % 13))]}
-export TOTAL=$((TOTAL / 13))
-export RES6=${BESTCHOL[$((TOTAL % 13))]}
-export TOTAL=$((TOTAL / 13))
-export RES7=${BESTCHOL[$((TOTAL % 13))]}
-export TOTAL=$((TOTAL / 13))
-export RES8=${BESTCHOL[$((TOTAL % 13))]}
-export RAW_OUT="$RES8$RES7$RES6$RES5$RES4$RES3$RES2$RES1"
-echo "${RAW_OUT##*b}"
+echo "13o 5i $(echo "$WATER" | tr 'water' '0-4') $(echo "$STIR" | tr 'stir.' '0-4') + p" | dc | tr '0-9A-C' 'bestchol'
