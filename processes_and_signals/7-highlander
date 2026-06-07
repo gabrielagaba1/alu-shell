@@ -1,11 +1,10 @@
 #!/usr/bin/env bash
-# This script prints a message indefinitely and traps SIGTERM signals cleanly
+# This script prints a message indefinitely and flushes SIGTERM traps immediately
 
-trap 'echo "I am invincible!!!"' SIGTERM
+trap 'printf "I am invincible!!!\n"' SIGTERM
 
 while true
 do
     echo "To infinity and beyond"
-    sleep 2 &
-    wait $!
+    sleep 2
 done
