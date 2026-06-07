@@ -1,2 +1,2 @@
 #!/bin/bash
-printf "%o\n" $(( $(echo "0${WATER}" | tr 'water' ' )*5+ ')0 ) + $(echo "0${STIR}" | tr 'stir' ' )*4+ ')0 ) )) | tr '01234567' 'bestchol'
+printf "%o\n" $(( 5#$(echo -n "$WATER" | tr 'water' '01234' | tr -d '\r\n') + 4#$(echo -n "$STIR" | tr 'stir' '01234' | tr -d '\r\n') )) | tr '01234567' 'bestchol'
