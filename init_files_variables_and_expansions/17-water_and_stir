@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "$((5#$(echo "$WATER" | tr 'water' '01234') + 5#$(echo "$STIR" | tr 'stir.' '01234')))"
+echo "obase=13; ibase=5; $(echo "$WATER" | tr 'water' '0-4') + $(echo "$STIR" | tr 'stir.' '0-4')" | bc | tr '0-9A-C' 'bestchol'
