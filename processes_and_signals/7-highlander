@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
-# This script prints a message indefinitely and flushes SIGTERM traps immediately
-
-trap 'printf "I am invincible!!!\n"' SIGTERM
+# This script displays a message indefinitely and handles SIGTERM
+trap 'echo "I am invincible!!!"' SIGTERM
 
 while true
 do
